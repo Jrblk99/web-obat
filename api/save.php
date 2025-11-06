@@ -1,8 +1,8 @@
 <?php
 header('Content-Type: application/json');
 
-$uploadDir = '../uploads/';
-$dataFile = '../data/obat.json';
+$uploadDir = 'web-obat/uploads/';
+$dataFile = 'web-obat/data/obat.json';
 
 // Buat folder jika belum ada
 if (!is_dir($uploadDir)) mkdir($uploadDir, 0755, true);
@@ -59,4 +59,5 @@ if ($action === 'update' && $id !== null) {
 
 file_put_contents($dataFile, json_encode($obats, JSON_PRETTY_PRINT));
 echo json_encode(['message' => 'Berhasil']);
+
 ?>
