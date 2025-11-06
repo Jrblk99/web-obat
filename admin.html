@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Obat</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🛠️ ADMIN - Kelola Obat</h1>
+    <a href="index.html" class="btn">🏠 Kembali ke Display</a>
+
+    <div class="card">
+      <h3 id="formTitle">➕ Tambah Obat Baru</h3>
+      <form id="obatForm">
+        <label for="inputNama">Nama Obat:</label>
+        <input type="text" id="inputNama" required placeholder="Contoh: Paracetamol">
+
+        <label for="inputHarga">Harga (Rp):</label>
+        <input type="number" id="inputHarga" min="1" required placeholder="Contoh: 5000">
+
+        <label for="inputFoto">Foto (PNG/JPG):</label>
+        <input type="file" id="inputFoto" accept=".png,.jpg,.jpeg,image/png,image/jpeg" required>
+
+        <button type="submit" class="btn save">💾 Simpan</button>
+        <button type="button" id="btnHapus" class="btn delete" style="display:none;">🗑️ Hapus</button>
+      </form>
+    </div>
+
+    <div class="card">
+      <h3>📋 Daftar Obat</h3>
+      <div id="daftarObat">Memuat...</div>
+    </div>
+  </div>
+  <script src="admin.js"></script>
+</body>
+</html>

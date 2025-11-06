@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Display Obat - Fullscreen</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0; padding: 0;
+      background: #000;
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+      overflow: hidden;
+    }
+    #display {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #1a2a6c, #2c3e50);
+      text-align: center;
+    }
+    #namaObat {
+      font-size: 4.5em;
+      margin-bottom: 25px;
+      text-shadow: 0 0 20px rgba(255,255,255,0.9);
+    }
+    #hargaObat {
+      font-size: 3.2em;
+      color: #4CAF50;
+      margin-bottom: 40px;
+      font-weight: bold;
+    }
+    #fotoObat {
+      max-width: 550px;
+      max-height: 550px;
+      border: 5px solid white;
+      border-radius: 20px;
+      box-shadow: 0 0 50px rgba(0,0,0,0.8);
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="display">
+    <div id="namaObat">Memuat...</div>
+    <div id="hargaObat">-</div>
+    <img id="fotoObat" alt="Foto Obat" />
+  </div>
+
+  <script>
+    // 🔥 Fullscreen otomatis
+    setTimeout(() => {
+      const el = document.documentElement;
+      if (el.requestFullscreen) el.requestFullscreen();
+      else if (el.webkitRequestFullscreen) el.webkitRequestFullscreen();
+    }, 1500);
+  </script>
+  <script src="main.js"></script>
+</body>
+</html>
