@@ -1,7 +1,7 @@
 <?php
 header('Content-Type: application/json');
 
-$dataFile = '../data/obat.json';
+$dataFile = 'web-obat/data/obat.json';
 $obats = file_exists($dataFile) ? json_decode(file_get_contents($dataFile), true) : [];
 
 $input = json_decode(file_get_contents('php://input'), true);
@@ -20,4 +20,5 @@ if ($id) {
     }
 }
 echo json_encode(['message' => 'Dihapus']);
+
 ?>
